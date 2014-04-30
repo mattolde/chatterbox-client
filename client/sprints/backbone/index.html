@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>chatterbox</title>
+    <link rel="stylesheet" href="../../styles/styles.css">
+
+    <!-- dependencies -->
+    <script src="../../bower_components/jquery/jquery.min.js"></script>
+    <script src="../../bower_components/underscore/underscore.js"></script>
+    <script src="../../bower_components/backbone/backbone.js"></script>
+    <!-- your scripts -->
+    <script src="../../scripts/config.js"></script>
+    <script src="app.js"></script>
+    <script>
+      $(function(){
+        // backbone
+        var messageB = new App.Models.Message({username: 'Matt', text: 'dasdasd'});
+        console.log("make BB");
+      });
+    </script>
+  </head>
+  <body>
+    <div class="myAccount">
+      <label>Name:</label>
+      <input type="text" id="userName"/>
+      <label>Room:</label>
+      <input type="text" id="room"/>
+      <textarea id="message"></textarea>
+      <button id="submit">Send</button>
+    </div>
+    <select id="roomSelect">
+      <option>All</option>
+    </select>
+    <div id="main">
+      <h1>chatterbox</h1>
+        <div id="chats"></div>
+    </div>
+
+  </body>
+</html>
